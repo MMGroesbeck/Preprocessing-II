@@ -1,1 +1,39 @@
 // Mixins in here
+.button-mix(@color: grey){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @color;
+    font-size: 1.6rem;
+    color: @white;
+    width: 95%;
+    border: 1px solid @navigation-border;
+    border-radius: 10px;
+    padding: 10px 0;
+    &:hover{
+        background-color: @navigation-border;
+    }
+}
+
+.plaintext(@size: 1.6rem, @spacing: 1.0, @btm-pad: 0){
+    line-height: @spacing;
+    font-size: @size;
+    padding-bottom: @btm-pad;
+    color: @font-color;
+    text-decoration: none;
+}
+
+.stack-it(){
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.wide-for-mobile(){
+    @media @mobile {
+        width: 100%;
+    }
+}
