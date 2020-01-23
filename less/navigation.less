@@ -1,14 +1,15 @@
 // Navigation Styles here
 .navi {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
   padding: 2% 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px dashed @navigation-border;
   .links {
+    .wide-for-mobile();
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     a {
       .plaintext();
       padding: 0 8px;

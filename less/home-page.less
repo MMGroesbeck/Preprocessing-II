@@ -22,17 +22,13 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
-      @media @mobile{
-        width: 100%;
-      }
+      .wide-for-mobile();
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-      @media @mobile{
-        width: 100%;
-      }
+      .wide-for-mobile();
 
       img {
         border-radius: 10px;
@@ -62,12 +58,13 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-    @media @mobile {
-      width: 100%;
-    }
-
+    padding: 10px 0 30px;
+    .wide-for-mobile();
     img {
       border-radius: 10px;
+    }
+    @media @mobile {
+      border-bottom: 2px dashed @navigation-border;
     }
   }
 
@@ -79,13 +76,12 @@
     @media @mobile {
       .stack-it();
       width: 80%;
+      border-top: none;
     }
 
     .destination {
       width: 30%;
-      @media @mobile {
-        width: 100%;
-      }
+      .wide-for-mobile();
       margin-bottom: 30px;
       .btn{
         .button-mix(@button-bg);
